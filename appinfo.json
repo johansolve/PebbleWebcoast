@@ -10,7 +10,6 @@
         "media": [
             {
                 "file": "images/menu_icon.png",
-                "menuIcon": true,
                 "name": "IMAGE_MENU_ICON",
                 "type": "png"
             },
@@ -30,13 +29,19 @@
                 "type": "font"
             },
             {
+                "file": "images/Webcoast-28.png",
+                "menuIcon": true,
+                "name": "IMAGES_WEBCOAST_28_PNG",
+                "type": "png"
+            },
+            {
                 "file": "images/Webcoast.png",
                 "name": "IMAGES_WEBCOAST_PNG",
                 "type": "png"
             }
         ]
     },
-    "shortName": "Webcoast",
+    "shortName": "WebCoast",
     "uuid": "0bb9158b-4e9a-4c40-b6e7-867be7b11785",
     "versionCode": 1,
     "versionLabel": "0.1",

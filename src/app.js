@@ -12,6 +12,7 @@ splash.show();
 
 var parseProgram = function(data, maxitems) {
   var items = [];
+	
   for(var i = 0; i < maxitems; i++) {
     var item = data['dag-1'][i];
     var dt=item.start_time;
