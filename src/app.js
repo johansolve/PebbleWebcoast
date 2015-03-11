@@ -69,10 +69,6 @@ ajax(
 			var dayNameClicked = daysMenuItems[e.itemIndex].title;
 			var programMenuItems = menuItems[dayNameClicked];
 			
-			console.log('Clicked day');
-			console.log(JSON.stringify(daysMenuItems[e.itemIndex]));
-			console.log(JSON.stringify(programMenuItems));
-			
 			// Create program menu for day
 			var programMenu = new UI.Menu({
 				sections: [{
