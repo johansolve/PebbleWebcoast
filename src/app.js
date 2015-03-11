@@ -3,7 +3,7 @@ var ajax = require('ajax');
 
 var splash = new UI.Card({
 	title: 'WebCoast',
-	subtitle: 'Hämtar program' //,
+	subtitle: 'Laddar...' //,
 	//icon: 'images/Webcoast.png'
 });
 
@@ -54,8 +54,7 @@ ajax(
 			var program = data['dag-1'][e.itemIndex];
 
 			// Assemble body string
-			var content = program.title
-				+ '\n\n' + program.content;
+			var content = program.title + '\n\n' + program.content;
 
 			// Create the Card for detailed view
 			var detailCard = new UI.Card({

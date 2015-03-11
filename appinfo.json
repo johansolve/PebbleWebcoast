@@ -29,14 +29,14 @@
                 "type": "font"
             },
             {
-                "file": "images/Webcoast-28.png",
-                "menuIcon": true,
-                "name": "IMAGES_WEBCOAST_28_PNG",
+                "file": "images/Webcoast.png",
+                "name": "IMAGES_WEBCOAST_PNG",
                 "type": "png"
             },
             {
-                "file": "images/Webcoast.png",
-                "name": "IMAGES_WEBCOAST_PNG",
+                "file": "images/Webcoast-28.png",
+                "menuIcon": true,
+                "name": "IMAGES_WEBCOAST_28_PNG",
                 "type": "png"
             }
         ]
