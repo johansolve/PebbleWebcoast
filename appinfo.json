@@ -29,14 +29,14 @@
                 "type": "font"
             },
             {
-                "file": "images/Webcoast.png",
-                "name": "IMAGES_WEBCOAST_PNG",
-                "type": "png"
-            },
-            {
                 "file": "images/Webcoast-28.png",
                 "menuIcon": true,
                 "name": "IMAGES_WEBCOAST_28_PNG",
+                "type": "png"
+            },
+            {
+                "file": "images/Webcoast.png",
+                "name": "IMAGES_WEBCOAST_PNG",
                 "type": "png"
             }
         ]
@@ -44,7 +44,7 @@
     "shortName": "WebCoast",
     "uuid": "0bb9158b-4e9a-4c40-b6e7-867be7b11785",
     "versionCode": 1,
-    "versionLabel": "0.1",
+    "versionLabel": "1.00",
     "watchapp": {
         "watchface": false
     }
