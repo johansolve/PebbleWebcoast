@@ -27,6 +27,7 @@ var parseProgram = function(data) {
 					subtitle: data[day][item].title,
 					date: date
 				}); 
+						eventData	 : data[day][item] // all data om programpunken
 			}
 		
 			items[dayname] = items[dayname].sort(function(a, b) {
@@ -79,6 +80,7 @@ ajax(
 			// Add an action for SELECT
 			programMenu.on('select', function(e) {
 				var program = data['dag-1'][e.itemIndex];
+				var program = programMenuItems[e.itemIndex].eventData;
 	
 				// Assemble body string
 				var content = program.title + '\n\n' + program.content;
