@@ -11,33 +11,30 @@ splash.show();
 
 
 var parseProgram = function(data) {
-	var days={'dag-1':'Fredag', 'dag-2':'Lördag', 'dag-3':'Söndag'};
+	var days={'dag-1': 'Fredag', 'dag-2':'Lördag', 'dag-3':'Söndag'};
 	var items = {};
 	for (var day in data) {
 		if (data.hasOwnProperty(day)) {
 			var dayname=days[day];
-			var dayItems = [];
-			for(var i = 0; i < 100; i++) {
-				var time;
-				var item = data[day][i];
-				if(item) {
-					var dt=item.start_time;
-					// Gör om 2015-03-13 23:00:00 +0000 
-					// till 2015-03-13T23:00:00+01:00 
-					dt = dt.replace(' ', 'T').replace(' +0000', '+01:00');
-					var d=new Date(dt);
-					time=(d.getHours() <= 9 ? '0':'') + d.getHours() + ':' + (d.getMinutes() <= 9 ? '0':'') + d.getMinutes();
-					// Add to menu items array
-					dayItems.push({
-						title:time,
-						subtitle:item.title
-					});
-				}
+			
+			items[dayname] = [];
+			for(var item in data[day]){
+				var date = new Date(data[day][item].start_time.replace(' ', 'T').replace(' +0000', '+01:00')),
+				times = date.toTimeString().split(' ')[0].split(':');
+				
+				items[dayname].push({
+					title: times[0] + ':' + times[1],
+					subtitle: data[day][item].title,
+					date: date
+				}); 
 			}
-		items[dayname]=dayItems;
+		
+			items[dayname] = items[dayname].sort(function(a, b) {
+				return a.date - b.date;
+			});
 		}
 	}
-
+	
 	return items;
 };
 ajax(
